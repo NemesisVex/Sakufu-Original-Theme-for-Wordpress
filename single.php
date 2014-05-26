@@ -8,9 +8,7 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+					<section id="main-content" class="main-content">
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
@@ -27,16 +25,12 @@ get_header(); ?>
 						comments_template();
 					}
 				endwhile;
-			?>
-			<hr />
-			<?php 
+						
 				// Previous/next post navigation.
 				sakufu_post_nav();
 			?>
-		</div><!-- #content -->
-	</div><!-- #primary -->
+					</section>
 
 <?php
-get_sidebar( 'content' );
 get_sidebar( 'sakufu' );
 get_footer();

@@ -44,17 +44,21 @@ function sakufu_paging_nav() {
 		'add_args' => array_map( 'urlencode', $query_args ),
 		'prev_text' => __( '&laquo; Previous', 'sakufu' ),
 		'next_text' => __( 'Next &raquo;', 'sakufu' ),
+		'type' => 'list',
+		'list_class' => 'pagination',
 	) );
 
 	if ( $links ) :
 
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
-		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'sakufu' ); ?></h4>
-		<p class="pagination loop-pagination centered">
+	<div class="row">
+	<nav class="navigation paging-navigation col-md-12" role="navigation">
+		<h4 class="screen-reader-text sr-only"><?php _e( 'Posts navigation', 'sakufu' ); ?></h4>
+		<p class="loop-pagination centered">
 			<?php echo $links; ?>
 		</p><!-- .pagination -->
 	</nav><!-- .navigation -->
+	</div>
 	<?php
 	endif;
 }
@@ -79,15 +83,14 @@ function sakufu_post_nav() {
 	<nav class="navigation post-navigation entry-nav" role="navigation">
 		<h4 class="screen-reader-text sr-only"><?php _e( 'Post navigation', 'sakufu' ); ?></h4>
 		<div class="nav-links entry-nav">
-			<p>
+			<ul class="pager">
 			<?php if ( is_attachment() ) : ?>
-				<p><?php previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'sakufu' ) ); ?></p>
+				<li><?php previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'sakufu' ) ); ?></li>
 			<?php else : ?>
-				<?php previous_post_link( '%link', __( '<span class="meta-nav" title="Previous Post: %title">PREVIOUS</span>', 'sakufu' ) ); ?>
-				<?php if ((get_previous_post_link() != "") && (get_next_post_link() != "")): ?>&#149;<?php endif; ?>
-				<?php next_post_link( '%link', __( '<span class="meta-nav" title="Next Post: %title">NEXT</span>', 'sakufu' ) ); ?>
+				<li class="previous"><?php previous_post_link( '%link', __( '<span class="meta-nav" title="Previous Post: %title">Previous</span>', 'sakufu' ) ); ?></li>
+				<li class="next"><?php next_post_link( '%link', __( '<span class="meta-nav" title="Next Post: %title">Next</span>', 'sakufu' ) ); ?></li>
 			<?php endif; ?>
-			</p>
+			</ul>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
