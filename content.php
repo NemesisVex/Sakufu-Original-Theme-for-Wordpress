@@ -9,11 +9,9 @@
  * @since Sakufu 1.0
  */
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="span-14 append-bottom">
-		<header>
-			<div class="span-14 last source-label">
+						<div class="row">
+						<article id="post-<?php the_ID(); ?>" <?php post_class('col-md-12'); ?>>
+							<header class="source-label">
 				<?php
 				if ( is_single() ) :
 					the_title( '<h3 class="source-title">', '</h3>' );
@@ -21,15 +19,17 @@
 					the_title( '<h3 class="source-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 				endif;
 				?>
-			</div>
-			<div class="span-4">
+							</header>
+							
+							<div class="row">
+								<div class="col-md-4">
 			<?php
 				if ('post' == get_post_type())
 					sakufu_posted_on();
 			?>
 				
-			<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && sakufu_categorized_blog() ) : ?>
-				<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'sakufu' ) ); ?></span>
+									<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && sakufu_categorized_blog() ) : ?>
+										<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'sakufu' ) ); ?></span>
 			<?php endif; ?>
 
 				<ul class="meta">
@@ -39,8 +39,7 @@
 					<li><?php edit_post_link( __( 'Edit', 'sakufu' ), '', '' ); ?></li>
 				</ul>
 			</div>
-		</header>
-		<div class="span-10 prepend-top last">
+								<div class="col-md-8 article-body">
 			<?php if ( is_search() ) : ?>
 			<div class="entry-summary">
 				<?php the_excerpt(); ?>
@@ -58,10 +57,9 @@
 				?>
 			</div><!-- .entry-content -->
 			<?php endif; ?>
+								<?php /*the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); */ ?>
 
-			<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
-			
 		</div>
 	</div>
-	
 </article><!-- #post-## -->
+						</div>

@@ -1,7 +1,6 @@
-				</div><!--sakufu-main-->
-			</div><!--sakufu-frame-1-->
+				</div>
 
-			<div id="frame-2" class="span-8 prepend-top last">
+				<aside id="frame-2" class="col-md-4">
 
 				<h3>About this weblog</h3>
 
@@ -14,7 +13,7 @@
 
 				<nav>
 					<ul>
-						<li> <a href="/index.php/gb/contact/">Contact</a></li>
+							<li> <a href="/contact/">Contact</a></li>
 						<li> <a href="/">Gregbueno.com</a></li>
 					</ul>
 				</nav>
@@ -25,7 +24,7 @@
 				
 				<?php get_search_form() ?>
 				
-				<hr>
+					<hr />
 
 				<h3>Calendar</h3>
 				
@@ -36,4 +35,7 @@
 
 				<hr />
 
+				<?php the_widget('WP_Widget_Categories', array( 'title' => __( 'Categories' )), array('before_title' => '<h3>', 'after_title' => '</h3>') ); ?>
+				
 				<?php the_widget('WP_Widget_Meta', array( 'title' => __( 'Meta' )), array('before_title' => '<h3>', 'after_title' => '</h3>') ); ?>
+				</aside>
