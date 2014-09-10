@@ -35,7 +35,7 @@ function sakufu_paging_nav() {
 	$format .= $GLOBALS['wp_rewrite']->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
 
 	// Set up paginated links.
-	$links = paginate_links( array(
+	$pagination_args = array(
 		'base'     => $pagenum_link,
 		'format'   => $format,
 		'total'    => $GLOBALS['wp_query']->max_num_pages,
@@ -46,7 +46,8 @@ function sakufu_paging_nav() {
 		'next_text' => __( 'Next &raquo;', 'sakufu' ),
 		'type' => 'list',
 		'list_class' => 'pagination',
-	) );
+	);
+	$links = ( function_exists( 'bootstrap_paginate_links' ) === true ) ? bootstrap_paginate_links( $pagination_args ) : paginate_links( $pagination_args );
 
 	if ( $links ) :
 
