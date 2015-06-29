@@ -1,11 +1,2 @@
-/*
-Theme Name: Sakufu
-Author: Greg Bueno
-Author URI: http://gregbueno.com/wp/sakufu/
-Description: A WordPress theme customized for Sakufu.
-Template: vexvox
-Version: 1.2
-Text Domain: sakufu
-*/
-
-@import url('../vexvox/style.css');
+@import url(../vexvox/style.css);body{background-color:#0F1715}.link-subhead{margin-bottom:0}h2.section-head{margin-bottom:0}input[type=radio],input[type=checkbox]{background-color:transparent;border:none}label{float:left;width:150px}label.error,span.error{display:none}time{margin:0 0 1.5em}.form_hidden{display:none}.screen-reader-text{display:none}.source-title{margin-bottom:0}.source-label{border-bottom:1px solid #253431}#masthead{background-color:#B7CCAE;border-bottom:3px double #8D8CA1}#frame-1{background-color:#F0F0F0}textarea{width:375px}ul.meta{list-style:none;margin:0;padding:0}.centered{text-align:center}.article-body,.comments-list-area{padding-top:1em}body{font-family:'georgia', 'book antiqua', 'palatino linotype', 'palatino', 'times new roman', 'times', serif}h1,h2,h3,h4,h5,h6{font-family:'helvetica', sans-serif}a:hover{color:#399FD5}a,a:focus{color:#EBAD15}input,select,textarea{font-size:100%;font-family:inherit}label{font-family:'helvetica', sans-serif;font-weight:bold}label.error,span.error{color:#F99}.smaller{font-size:smaller}#masthead #title{font-size:500%}#masthead #title a{color:inherit;text-decoration:none}#frame-1{color:#000}#frame-1 a{color:#2B2C33}#frame-1 .source-title a{color:#000;text-decoration:none}#frame-2{color:#FFF}#frame-2 h1,#frame-2 h2,#frame-2 h3,#frame-2 h4,#frame-2 h5,#frame-2 h6{color:#FFF}#frame-2 a{font-family:'helvetica', sans-serif}.smaller-90{font-size:90%}a.entry-format{text-decoration:none}
+/*# sourceMappingURL=style.css.map */
