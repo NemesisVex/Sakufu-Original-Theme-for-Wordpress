@@ -1,0 +1,19 @@
+/*
+Theme Name: Sakufu
+Author: Greg Bueno
+Author URI: http://gregbueno.com/wp/sakufu/
+Description: A WordPress theme customized for Sakufu.
+Template: vexvox
+Version: 2.0
+Text Domain: sakufu
+*/
+@import url(../vexvox/style.css);
+/* 
+    Created on : Apr 30, 2014, 8:00:07 AM
+    Author     : gregbueno
+*/
+#masthead {
+  background-color: #B7CCAE;
+  border-bottom: 3px double #8D8CA1; }
+
+/*# sourceMappingURL=style.dev.css.map */
